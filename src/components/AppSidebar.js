@@ -30,7 +30,7 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <div style={{ fontSize: '20px', fontWeight: 'bold' }}>ASIA STATIONERY</div>
+        <div style={{ fontSize: '20px', fontWeight: 'bold' }} ><a href="/dashboard" style={{textDecoration:'None', color:'white'}}>ASIA STATIONERY</a></div>
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
       </CSidebarBrand>
       <CSidebarNav>

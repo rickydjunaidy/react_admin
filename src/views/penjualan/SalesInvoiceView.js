@@ -5,28 +5,33 @@ import {
   CCardBody,
   CCardHeader,
   CCol,
-  CForm,
-  CFormInput,
-  CFormLabel,
-  CFormTextarea,
   CRow,
   CTable,
   CTableBody,
-  CTableCaption,
   CTableDataCell,
   CTableHead,
   CTableHeaderCell,
   CTableRow,
 } from '@coreui/react'
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import useFetch from '../../components/useFetch.js';
 import { DocsExample } from 'src/components'
 
 const SalesInvoiceView = () => {
+  const { data, loading, error } = useFetch('http://localhost/react/api/sales_invoice/sales_invoice.php')
+  console.log(data)
   return (
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>List Sales Invoice</strong>
+            <Navbar>
+              <Container>
+                <strong>List Sales Invoice</strong>
+                <CButton>Tambah Data</CButton>
+              </Container>
+            </Navbar>
           </CCardHeader>
           <CCardBody>
             <DocsExample href="forms/form-control">
@@ -40,12 +45,16 @@ const SalesInvoiceView = () => {
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
-                  <CTableRow>
-                    <CTableDataCell scope="row">1</CTableDataCell>
-                    <CTableDataCell>2023-01-01</CTableDataCell>
-                    <CTableDataCell>ASIA-SI-001</CTableDataCell>
-                    <CTableDataCell>Rp 3.000.000,00 </CTableDataCell>
-                  </CTableRow>
+                {
+                 data?.data?.result?.map(item => (
+                    <CTableRow key={item.id}>
+                      <CTableDataCell scope="row">{item.id}</CTableDataCell>
+                      <CTableDataCell>{item.tanggal}</CTableDataCell>
+                      <CTableDataCell>{item.name}</CTableDataCell>
+                      <CTableDataCell>{item.total_penjualan}</CTableDataCell>
+                    </CTableRow>
+                  ))
+                }
                 </CTableBody>
               </CTable>
             </DocsExample>

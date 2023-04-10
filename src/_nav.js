@@ -306,7 +306,7 @@ const _nav = [
   {
     component: CNavGroup,
     name: 'Penjualan',
-    to: '/#/dashboard',
+    to: '/penjualan/sales_invoice_view',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
     items: [
       {
