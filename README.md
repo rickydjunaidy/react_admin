@@ -13,7 +13,7 @@ npm (version 7 or higher)
 # Tech Stacks
 The application was built using the following technologies:
 
-React JS : A popular JavaScript library for building user interfaces.
-React Router : A routing library for React JS applications.
-Material UI : A popular CSS framework for styling web applications.
-Axios : A promise-based HTTP client for making API requests.
+React JS : A popular JavaScript library for building user interfaces
+React Router : A routing library for React JS applications
+Material UI : A popular CSS framework for styling web applications
+Axios : A promise-based HTTP client for making API requests
