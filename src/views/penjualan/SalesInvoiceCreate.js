@@ -22,7 +22,7 @@ const SalesInvoiceView = () => {
   }
 
   function getNomerNota() {
-    const { data, loading, error } = useFetch('http://localhost/react/api/sales_invoice/sales_invoice.php')
+    // const { data, loading, error } = useFetch('http://localhost/react/api/sales_invoice/sales_invoice.php')
   }
 
   return (

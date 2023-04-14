@@ -21,8 +21,7 @@ import { useNavigate } from "react-router-dom";
 import { cibWindows } from '@coreui/icons';
 
 const SalesInvoiceView = () => {
-  const { data, loading, error } = useFetch('http://localhost/react/api/sales_invoice/sales_invoice.php')
-  // console.log(data)
+  const { data, loading, error } = useFetch('/api/test')
   const navigate = useNavigate()
   return ( 
     <CRow>

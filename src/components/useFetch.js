@@ -1,8 +1,10 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
+import axios from "axios";
+import { useState, useEffect } from "react";
+import APICONFIG  from '../config_api.js';
 
 // API CALL and process JSON
 function useFetch(url){
+    console.log(APICONFIG()+url)
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
