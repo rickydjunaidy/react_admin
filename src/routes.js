@@ -102,7 +102,7 @@ const routes = [
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/penjualan/sales_invoice_view', name: 'SalesInvoiceView', element: SalesInvoiceView },
-  { path: '/penjualan/sales_invoice_create', name: 'SalesInvoiceCreate', element: SalesInvoiceCreate },
+  { path: '/penjualan/sales_invoice_view/sales_invoice_create', name: 'SalesInvoiceCreate', element: SalesInvoiceCreate },
 ]
 
 export default routes

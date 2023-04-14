@@ -17,11 +17,14 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import useFetch from '../../components/useFetch.js';
 import { DocsExample } from 'src/components'
+import { useNavigate } from "react-router-dom";
+import { cibWindows } from '@coreui/icons';
 
 const SalesInvoiceView = () => {
   const { data, loading, error } = useFetch('http://localhost/react/api/sales_invoice/sales_invoice.php')
-  console.log(data)
-  return (
+  // console.log(data)
+  const navigate = useNavigate()
+  return ( 
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
@@ -29,7 +32,9 @@ const SalesInvoiceView = () => {
             <Navbar>
               <Container>
                 <strong>List Sales Invoice</strong>
-                <CButton>Tambah Data</CButton>
+                <CButton onClick={()=>{
+                 navigate('/penjualan/sales_invoice_view/sales_invoice_create')
+                }}>Tambah Data</CButton>
               </Container>
             </Navbar>
           </CCardHeader>

@@ -5,8 +5,7 @@ const AppFooter = () => {
   return (
     <CFooter>
       <div>
-      ASIA STATIONERY,<br/>
-      JL. Kinibalu No.4, Banjarmasin
+      MyAdmin<br/>
       </div>
       <div className="ms-auto">
         <span className="me-1">Powered by</span>
