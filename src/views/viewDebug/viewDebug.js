@@ -6,6 +6,13 @@ import React, { useState } from "react"
 
 const ViewDebug = () => {
     const [inputMe, setInputMe] = useState("Hello useState ReactJS")
+    const [validationMessage, setValidationMessage] = useState("")
+
+    const handleValidation = (event) => {
+        if (event == "Hello World") {
+            setValidationMessage("Baru Belajar ea?")
+        }
+    }
 
     const handleInputChange = (event) => {
         setInputMe(event.target.value);
@@ -32,6 +39,9 @@ const ViewDebug = () => {
                             onChange={ handleInputChange }
                             value={ inputMe }
                         />
+                        <CFormLabel> 
+                            { validationMessage }
+                        </CFormLabel>
                         </div>
                     </CForm>
                     <strong>
