@@ -1,5 +1,8 @@
 import React from 'react'
 
+//Debug Test
+const viewDebug = React.lazy(() => import('./views/viewDebug/viewDebug'))
+
 //Penjualan
 const SalesInvoiceView = React.lazy(() => import('./views/penjualan/SalesInvoiceView'))
 const SalesInvoiceCreate = React.lazy(() => import('./views/penjualan/SalesInvoiceCreate'))
@@ -103,6 +106,7 @@ const routes = [
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/penjualan/sales_invoice_view', name: 'SalesInvoiceView', element: SalesInvoiceView },
   { path: '/penjualan/sales_invoice_view/sales_invoice_create', name: 'SalesInvoiceCreate', element: SalesInvoiceCreate },
+  { path: '/debug', name: 'viewDebug', element: viewDebug }
 ]
 
 export default routes
